@@ -12,5 +12,6 @@ echo.>>3.tmp
 
 findstr /c:"://" 3.tmp>4.tmp
 set LC_ALL='C'
-s -u -i -o ..\sub 4.tmp
+s -u -i -o 5.tmp 4.tmp
+certutil -f -encode 5.tmp ..\sub
 del *.tmp
