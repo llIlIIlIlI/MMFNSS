@@ -10,7 +10,7 @@ type 2.tmp>>3.tmp
 echo.>>3.tmp
 )
 
-findstr /c:"://" 3.tmp>4.tmp
+findstr /c:"://" 3.tmp | findstr /v /b /c:"ht" >4.tmp
 set LC_ALL='C'
 s -u -i -o 5.tmp 4.tmp
 certutil -f -encode 5.tmp 6.tmp
